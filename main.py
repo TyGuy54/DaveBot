@@ -1,11 +1,11 @@
 import discord
-from message_events.events_factpry import OnEvents, Event
 from discord.ui import View
 from dotenv import load_dotenv
 from discord.ext import commands
 from components.music_modal import SongButton
+from util.random_movie import get_random_movie
 from util.env_tokens import MOM_JOKES, DISCORD_TOKEN
-from bot_commands.random_movie import get_random_movie
+from message_events.events_factory import OnEvents, Event
 
 load_dotenv()
 

@@ -3,3 +3,4 @@ env
 .venv/
 venv/
 .DS_Store
+util/song_db/server_songs.db
