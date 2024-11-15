@@ -1,5 +1,5 @@
 import aiohttp
-from bot_commands.get_songs import get_a_song
+from util.get_songs import get_a_song
 from enum import Enum, auto
 from util.env_tokens import MOM_JOKES
 
