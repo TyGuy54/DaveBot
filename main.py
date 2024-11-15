@@ -60,10 +60,22 @@ async def add_songs(ctx: commands.Context):
     await ctx.send("Click the button to add a song!:", view=view)
 
 
+# Dumb/silly commands that dont do anything
 @bot.command(name='b')
 async def funny_joke(ctx):
     response = 'bazinga'
     await ctx.send(response)
+
+
+# A help commands to list all of DaveBots commands
+@bot.command(name='dave-help-me')
+async def help_command(ctx):
+    """a function to list all of the possable commands"""
+
+    await ctx.send("Here are all of my commands")
+    await ctx.send("!b- I will say a funny joke from a funny show")
+    await ctx.send("!gimmie-movie - I will give you a random movie")
+    await ctx.send("!add-song - I will give you a button to press to add a song to the servers playlist")
 
 
 if __name__ == '__main__':
