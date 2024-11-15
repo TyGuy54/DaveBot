@@ -1,15 +1,14 @@
 import os
 import aiohttp
 import random
-
-MOVIE_KEY = os.getenv('MOVE_API_KEY')
+from util.env_tokens import MOVIE_ENDPOINT, MOVIE_KEY
 
 # Function to fetch a random movie from OMDb API
 async def get_random_movie():
     """Fetches a random movie using the TMDb API."""
     async with aiohttp.ClientSession() as session:
         # Set up the API endpoint with your API key
-        url = "https://api.themoviedb.org/3/discover/movie"
+        url = MOVIE_ENDPOINT
         
         params = {
             "api_key": MOVIE_KEY,
